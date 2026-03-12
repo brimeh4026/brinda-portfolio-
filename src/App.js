@@ -138,7 +138,6 @@ function App() {
         <div className="left-cards-grid">
           <div className="card grid-card">
             <div className="card-header">
-              <span className="card-icon">🦾</span>
               <div>
                 <h3>AbbVie</h3>
                 <p className="subtitle">AI Intern</p>
@@ -152,7 +151,6 @@ function App() {
 
           <div className="card grid-card">
             <div className="card-header">
-              <span className="card-icon">📊</span>
               <div>
                 <h3>Orsini</h3>
                 <p className="subtitle">Data Analyst</p>
@@ -167,7 +165,6 @@ function App() {
 
           <div className="card grid-card">
             <div className="card-header">
-              <span className="card-icon">📈</span>
               <div>
                 <h3>Economic Comp.</h3>
               </div>
@@ -182,7 +179,6 @@ function App() {
 
           <div className="card grid-card">
             <div className="card-header">
-              <span className="card-icon">⚡</span>
               <div>
                 <h3>Spark AI Platform</h3>
               </div>
@@ -232,15 +228,9 @@ function App() {
           <div className="contact-info">
             <h2>Get in Touch!</h2>
             <ul>
-              <li>
-                <span className="c-icon">📍</span> Chicago, US
-              </li>
-              <li>
-                <span className="c-icon">📞</span> (847)-271-1912
-              </li>
-              <li>
-                <span className="c-icon">✉️</span> brindamehra03@gmail.com
-              </li>
+              <li>Chicago, US</li>
+              <li>(847)-271-1912</li>
+              <li>brindamehra03@gmail.com</li>
             </ul>
           </div>
         </div>
