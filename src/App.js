@@ -25,8 +25,8 @@ function App() {
       <section className="hero">
         <div className="hero-content">
           <div className="profile-cluster">
-            <div className="circle-bg circle-1"></div>
-            <div className="circle-bg circle-2"></div>
+            {/* <div className="circle-bg circle-1"></div>
+            <div className="circle-bg circle-2"></div>*/}
             <img
               src={profilePhoto}
               alt="Brinda Mehra"
