@@ -1,21 +1,18 @@
 import React from "react";
 import "./App.css";
 
-// Your specific image imports
 import profilePhoto from "./assets/images/brinda-photo.png";
 import linkedinIcon from "./assets/images/linkedin.png";
 import githubIcon from "./assets/images/github.png";
 import emailIcon from "./assets/images/email.png";
 import instagramIcon from "./assets/images/instagram.png";
 
-// Import your documents & preview image
 import resumePDF from "./assets/documents/Brinda_Mehra_Resume.pdf";
 import resumePreview from "./assets/images/resume.png";
 
 function App() {
   return (
     <div className="figma-canvas">
-      {/* Header */}
       <header className="top-header">
         <div className="logo-name">Brinda Mehra</div>
         <nav className="top-nav">
@@ -25,7 +22,6 @@ function App() {
         </nav>
       </header>
 
-      {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <div className="profile-cluster">
@@ -90,7 +86,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="about-section">
         <div className="card about-card">
           <div className="about-text">
@@ -223,7 +218,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="card contact-card">
           <form className="contact-form">
