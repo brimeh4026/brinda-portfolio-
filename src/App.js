@@ -13,6 +13,34 @@ import resumePreview from "./assets/images/resume.png";
 function App() {
   const [activeProject, setActiveProject] = useState(null);
 
+  const [formStatus, setFormStatus] = useState("");
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus("submitting");
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xjgazvvy", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setFormStatus("success");
+        form.reset();
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      setFormStatus("error");
+    }
+  };
   const projectStories = {
     economic: {
       title: "Economic Comp.",
@@ -252,7 +280,7 @@ function App() {
           <div className="card-header">
             <div>
               <h3>Orsini</h3>
-              <p className="subtitle">Data Analyst• Sep 2024 - May 2025</p>
+              <p className="subtitle">Data Analyst • Sep 2024 - May 2025</p>
             </div>
           </div>
           <p className="card-desc">
@@ -403,33 +431,50 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="contact-section fade-in-anim">
         <div className="card contact-card">
-          <form className="contact-form">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message" rows="4"></textarea>
-            <button type="submit" className="submit-btn">
-              Submit
+          <form className="contact-form" onSubmit={handleFormSubmit}>
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" rows="4"></textarea>
+            <button
+              type="submit"
+              className="submit-btn"
+              disabled={formStatus === "submitting"}
+            >
+              {formStatus === "submitting" ? "Sending..." : "Submit"}
             </button>
+
+            {formStatus === "success" && (
+              <p
+                style={{
+                  color: "#799476",
+                  marginTop: "10px",
+                  fontWeight: "bold",
+                }}
+              >
+                Thanks! Your message was sent successfully.
+              </p>
+            )}
+            {formStatus === "error" && (
+              <p
+                style={{ color: "red", marginTop: "10px", fontWeight: "bold" }}
+              >
+                Oops! There was a problem submitting your form.
+              </p>
+            )}
           </form>
           <div className="contact-info">
             <h2>Get in Touch!</h2>
             <ul>
               <li>Chicago, US</li>
               <li>(847)-271-1912</li>
-              <li>
-                <a href="mailto:brindamehra03@gmail.com" className="email-link">
-                  brindamehra03@gmail.com
-                </a>
-              </li>
+              <li>brindamehra03@gmail.com</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Pop-up Modal */}
       {activeProject && (
         <div className="modal-overlay" onClick={() => setActiveProject(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
