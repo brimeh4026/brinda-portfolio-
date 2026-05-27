@@ -225,7 +225,7 @@ function App() {
             <h2>About Me</h2>
             <br />
             <p>
-              Computer Science & Economics student at the University of
+              Computer Science & Economics graduate at the University of
               Wisconsin-Madison
             </p>
             <p className="skills-text">
@@ -267,7 +267,9 @@ function App() {
           <div className="card-header">
             <div>
               <h3>AbbVie</h3>
-              <p className="subtitle">Commodity Analyst • May 2025 - Present</p>
+              <p className="subtitle">
+                Commodity Analyst • May 2025 - April 2026
+              </p>
             </div>
           </div>
           <p className="card-desc">
