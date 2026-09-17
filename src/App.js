@@ -238,10 +238,11 @@ function App() {
               <strong>Languages:</strong>{" "}
               <span className="highlight-text">English & Hindi</span>
               <br />
-              <strong>Relevant Courses:</strong>{" "}
+              <strong>Business Strengths:</strong>{" "}
               <span className="highlight-text">
-                Introduction to Algorithms | Introduction to Software Security |
-                Industrial Structure and Competitive Strategy
+                Consultative Communication, Technical-to-Business Translation,
+                Cross-Functional Collaboration, Data-Driven Decision Making,
+                Presentation & Storytelling
               </span>
             </p>
           </div>
